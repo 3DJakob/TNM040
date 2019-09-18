@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(180deg, rgba(49,160,227,1) 0%, rgba(34,116,165,1) 100%);
+  padding: 20px;
+
+}
+
+h1, h2, p {
+  color: #E9F1F7;
+}
+
+p{
+  margin: 0.5em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  padding: 10px;
+  transition: 200ms;
+}
+
+.country:hover {
+  transform: scale(1.05);
+}
+
+.country .flag {
+  margin-right: 15px !important;
+  align-self: flex-start;
+  margin-top: 15px !important;
+}
+
+.country .row > * {
+  margin: 0 10px 0 0;
+}
+
+.country .row > :first-child {
+  font-weight: bold;
+}
+
+.country .row > :last-child {
+  font-weight: lighter;
+}
+
+.country .bar {
+  background: #E7DFC6;
+  height: 4px;
+  border-radius: 2px;
+  animation: scaleX 500ms;
+  transform-origin: center left;
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scale(0, 1)
+  } 100% {
+    transform: scale(1, 1)
+  }
+}
